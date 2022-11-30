@@ -13,6 +13,7 @@
 
         <! -- Custom styles for this template -->
         <link rel ="stylesheet" href="{% static 'blog/css/blog-post.css' %}" media = "screen">
+        <script src="https://kit.fontawesome.com/e6f095446f.js" crossorigin="anonymous"></script>
 
     </head>
     <body>
@@ -60,6 +61,13 @@
                         <section class="mb-5">
                          <p> {{ post.content }}</p>
                         </section>
+                        {% if post.file_upload %}
+                        <a href="{{ post.file_upload.url }}" class="btn btn-outline-dark" role="button" download>
+                           Download :
+                            <i class="fa-sharp fa-solid fa-file"></i> {{ post.get_file_name }}
+                        </a>
+                        {% endif %}
+
                     </article>
                     <!-- Comments section-->
                     <section class="mb-5">
