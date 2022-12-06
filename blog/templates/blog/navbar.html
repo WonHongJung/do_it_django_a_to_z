@@ -22,9 +22,15 @@
           <ul class = "navbar-nav ml-auto">
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
-                  <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  {% if user.socialaccount_set.all.first.get_avatar_url %}
+                      <img class="rounded-circle" width="25px" src="{{ user.socialaccount_set.all.first.get_avatar_url }}" alt="">
+                  {% else %}
+                      <img class="rounded-circle" width="25px" src="https://doitdjango.com/avatar/id/1355/15ec54e127c974d3/svg/{{ user.email }}" alt="">
+                  {% endif %}
+                &nbsp;
                 {{ user.username }}
+              </a>
               </a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="/accounts/logout/">Log Out</a>
