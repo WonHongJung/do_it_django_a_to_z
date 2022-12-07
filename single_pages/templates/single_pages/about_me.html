@@ -1,20 +1,189 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>개발자 달타냥입니다.</title>
+    <title>About 정원홍</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+     <script src="https://kit.fontawesome.com/e6f095446f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<nav>
- <a href="/blog/">Blog</a>
-  <a href="/about_me">About me</a>
-</nav>
+{% include 'blog/navbar.html' %}
 
-<h1>안녕하세요. 달타냥입니다.</h1>
-<h2>이력</h2>
-<h2>portfolio</h2>
-<h3>아직 공사중입니다.</h3>
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>사파리입니다.</h1>
+<br/>
+                <p class="lead">
+                   아프리카 동물들을 소개합니다.<br/>
 
-</body>
+                </p>
+                <ul>
+                    <li>동물의 왕</li>
+                    <ul>
+                        <li>사자</li>
+                    </ul>
+                    <li>목이 긴 동물</li>
+                <ul>
+                <li> 기린</li>
+                </ul>
+                    <li>코가 긴 동물</li>
+                    <ul>
+                        <li> 기린</li>
+                        </ul>
+                </ul>-
+            </div>
+               <div class="col-lg-4">
+                    <img class="img-fluid" src="{% static 'single_pages/images/사파리.jpg' %}">
+               </div>
+        </div>
+    </div>
+</section>&nbsp;
+
+<section class="bg-light margin-for-footer">
+    <div class="container">
+        <div class="row">
+            <div class="clo-12">
+                <h1>PORTFOLIO</h1>
+        </div>
+        </div>
+         <div class="row">
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#pycon2017">
+                    <img class="card-img-top" src="{% static 'single_pages/images/사자.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">사자</h5>
+                        <p>사자의 특징을 알아보자</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#inflearn_django2">
+                    <img class="card-img-top" src="{% static 'single_pages/images/기린.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">기린</h5>
+                        <p>기린의 특징을 알아보자</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#automation_python">
+                    <img class="card-img-top" src="{% static 'single_pages/images/코끼리.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">코끼리</h5>
+                        <p>코끼리의 특징을 알아보자</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="pycon2017" tabindex="-1" role="dialog" aria-labelledby="pycon2017ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pycon2017ModalLabel">사자의 특징</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/사자.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>수컷이 몸길이 185cm, 꼬리길이 90cm, 몸무게 185kg, 어깨높이는 110cm에 이르며,
+                            암컷이 몸길이 155cm, 꼬리길이 80cm, 몸무게 125kg, 어깨 95cm로 수컷은 암컷보다 훨씬 크다.
+                            몸통이 짧고 다리가 길며, 배가 달라붙어 있어 달리기에 적당하다.</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i>YOUTUBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="inflearn_django2" tabindex="-1" role="dialog" aria-labelledby="inflearnDjangoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id=" inflearnDjangoModalLabel">기린의 특징</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/기린.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>목이 긴 육상 동물이며 또한 가장 큰 반추 동물이기도 하다. 수컷은 키가 4.8m~5.5m이며 몸무게는 1700kg까지 나간다.
+                            암컷은 보통 수컷보다 약간 작다. 몸 색깔은 대개 주황색이 도는 갈색, 적갈색 또는
+                            검은색의 패치 모양의 얼룩이, 크림색이 도는 엷은 황색의 그물눈에 의해 구획되어 있다.
+                            기린은 사슴 및 소와 생물학상 관계가 있으며, 기린과 오카피 단 두 속만으로 구성되는 기린과에 속한다.</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i>YOUTUBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="automation_python" tabindex="-1" role="dialog" aria-labelledby="automationPythonModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id=" automationPythonModalLabel">코끼리 특징</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/코끼리.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>, 현생 육상동물 중 가장 몸집이 크다. 현재까지 확인된 현존하는 종은 총 3종으로,
+                            아프리카코끼리·아시아코끼리·둥근귀코끼리로 나뉜다. 이미 오래전 멸종한 매머드도 같은 과로 분류된다.
+                            열대 및 일부 온대 기후를 보이는 사하라 이남 아프리카·남아시아·동남아시아 등지에 걸쳐 서식한다.</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> YOUTUBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+
+<div class="fixed-bottom">
+{% include 'blog/footer.html' %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  </body>
 </html>
